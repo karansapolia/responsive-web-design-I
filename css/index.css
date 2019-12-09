@@ -24,7 +24,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	/* border: 1px solid black; */
+	border: 1px solid black;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5 {
 
 ul {
 	list-style-type: square;
+	list-style-position: inside;
 }
 
 .container {
@@ -103,7 +104,7 @@ nav .links {
 	animation-name: color-change;
 	animation-duration: 3s;
 	animation-play-state: paused;
-	color: rgb(199, 199, 199);
+	color: gray;
 	text-decoration: none;
 	margin: 0 5% 0 0;
 }
@@ -116,7 +117,7 @@ nav .links {
 @keyframes color-change {
     from { 
         background-color: white;
-        color: black;
+        color: gray;
     }
 	to { 
         background-color: black;
@@ -370,16 +371,6 @@ footer p {
 	background-color: #f4f3f4;
 }
 
-@media all and (max-width: 800px) {
-	.services-section-two {
-		flex-flow: column nowrap;
-	}
-	
-	.services-section-two div {
-		width: 100%;
-	}
-}
-
 .services-section-two div button {
 	height: 35px;
 	width: 150px;
@@ -421,6 +412,33 @@ footer p {
 }
 
 .services-section-three ul {
-	margin-left: 3%;
 	line-height: 200%;
+}
+
+@media all and (max-width: 800px) {
+	.services-section-two {
+		flex-flow: column nowrap;
+	}
+	
+	.services-section-two div {
+		width: 100%;
+	}
+	.services-section-three {
+		flex-flow: column nowrap;
+	}
+	.services-section-three div {
+		width: 100%;
+		margin-bottom: 5%;
+	}
+	.services-section-three .employee-image img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.services-section-three .employee-image img {
+		width: 100%;
+		overflow: hidden;
+	}
 }
