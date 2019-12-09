@@ -253,24 +253,34 @@ footer p {
 
     nav {
         flex-flow: column-reverse nowrap;
+        align-items: stretch;
     }
 
-    nav div {
+    nav .logo {
         width: 100%;
+        padding: 4% 0;
+        margin: 0 auto;
+        align-content: center;
+        border-bottom: 1px solid black;
     }
 
-    nav img {
+    nav .logo img {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
         max-width: 150px;
-        padding: 5% 0;
-        border-bottom: 1px solid black;
+        border: none;
     }
 
     nav .links {
         flex-flow: column nowrap;
+        align-items: stretch;
     }
 
     nav .links a {
-        padding: 7% 0;
+        text-align: center;
+        padding: 5% 0;
+        margin: 0;
         border-bottom: 1px solid black;
     }
 
@@ -279,7 +289,7 @@ footer p {
     }
 
     .title h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .title-container button {
