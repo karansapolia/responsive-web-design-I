@@ -231,6 +231,15 @@ footer p {
         align-content: center;
     }
 
+    nav .links a {
+        animation: none;
+        color: gray;
+    }
+
+    .section-one {
+        padding-bottom: 15%;
+    }
+
     .section-one img {
         display: none;
     }
