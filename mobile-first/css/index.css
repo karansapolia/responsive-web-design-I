@@ -138,7 +138,6 @@ nav .logo img {
 }
 
 nav a img {
-	width: 100%;
 	max-width: 200px;	
 }
 
@@ -245,7 +244,6 @@ footer p {
     }
 
     nav .logo {
-        width: 100%;
         padding: 4% 0;
         margin: 0 auto;
         align-content: center;
@@ -261,8 +259,8 @@ footer p {
     }
 
     nav .links {
-        flex-flow: column nowrap;
-        align-items: stretch;
+        flex-flow: row nowrap;
+        align-items: center;
     }
 
     nav .links a {
@@ -295,20 +293,20 @@ footer p {
     }
 
     .section-two {
-        flex-flow: column nowrap;
+        flex-flow: row nowrap;
     }
 
     .section-two div {
-        width: 95%;
+        width: 45%;
         margin: 5% 0;
     }
 
     .section-four {
-        flex-flow: column nowrap;
+        flex-flow: row nowrap;
     }
 
     .section-four div {
-        width: 95%;
+        width: 30%;
         margin: 5% 0;
 
     }
@@ -336,7 +334,7 @@ footer p {
     }
 
     .section-one img {
-        display: none;
+        display: flex;
     }
 }
 
