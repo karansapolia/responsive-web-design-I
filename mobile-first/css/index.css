@@ -313,24 +313,24 @@ footer p {
 }
 
 @media(min-width:801px) {
+	header {
+		margin: 0;
+	}
+
     nav {
         flex-flow: row nowrap;
-        align-items: center;
+		align-items: center;
+		padding: 0;
+		margin: 0;
     }
 
     nav .logo {
-        padding: 5% 0;
         margin: 0 auto;
         align-content: center;
     }
 
-    nav .links a {
-        animation: none;
-        color: gray;
-    }
-
     .section-one {
-        padding-bottom: 15%;
+		margin: 0;
     }
 
     .section-one img {
