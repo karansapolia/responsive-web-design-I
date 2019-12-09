@@ -96,7 +96,7 @@ nav .links {
 	display: flex;
     justify-content: space-between;
     align-items: center;
-	width: 70%;
+	flex-grow: 4;
 }
 
 .links a {
@@ -106,7 +106,6 @@ nav .links {
 	color: rgb(199, 199, 199);
 	text-decoration: none;
 	margin: 0 5% 0 0;
-	font-family: 'Roboto';
 }
 
 .links a:hover {
@@ -220,7 +219,24 @@ footer p {
 	text-align: center;
 }
 
-@media(max-width:400px) {
+@media(max-width:800px) {
+    nav {
+        flex-flow: column-reverse nowrap;
+        align-items: stretch;
+    }
+
+    nav .logo {
+        padding: 5% 0;
+        margin: 0 auto;
+        align-content: center;
+    }
+
+    .section-one img {
+        display: none;
+    }
+}
+
+@media(max-width:500px) {
     .container {
         width: 100%;
         margin: 0;
