@@ -1,0 +1,457 @@
+/* Use your own code or past solution for Great Idea Web Page CSS here! */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	border: 1px solid black;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* CSS RESETS END */
+
+/* ------------------------------- */
+
+/* CUSTOM STYLES */
+
+* {
+	max-width: 100%;
+}
+
+ul {
+	list-style-type: square;
+	list-style-position: inside;
+}
+
+.container {
+	width: 100%;
+	margin: 0;
+}
+
+/* NAV BAR STYLES */
+
+nav {
+	display: flex;
+	flex-flow: column-reverse nowrap;
+	align-items: stretch;
+	justify-content: space-between;
+	margin: 2% 0;
+}
+
+nav .links {
+	display: flex;
+	flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+	flex-grow: 4;
+}
+
+nav .logo img {
+	display: block;
+	margin: 0 auto;
+}
+
+.links a {
+	text-align: center;
+    padding: 5% 0;
+    margin: 0;
+    border-bottom: 1px solid black;
+	animation-name: color-change;
+	animation-duration: 3s;
+	animation-play-state: paused;
+	color: gray;
+	text-decoration: none;
+}
+
+.links a:hover {
+	animation-play-state: running;
+}
+
+
+@keyframes color-change {
+    from { 
+        background-color: white;
+        color: gray;
+    }
+	to { 
+        background-color: black;
+        color: white;
+    }
+}
+
+nav a img {
+	width: 100%;
+	max-width: 200px;	
+}
+
+/* SECTION ONE STYLES */
+
+.title {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h1 {
+	font-size: 3rem;
+}
+
+.section-one {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 7% 0 0 0;
+	padding: 5% 0;
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+.title-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 50%;
+}
+
+.title-container button {
+	width: 75%;
+	font-size: 120%;
+	text-decoration: none;
+	background: white;
+	color: black;
+	border: 1px solid black;
+	transition: all 0.2s;
+}
+
+.title-container button:hover {
+	color: black;
+	background-color: grey;
+}
+
+.section-one img {
+	display: none;
+	width: 40%;
+	max-width: 500px;
+}
+
+.section-two {
+	padding: 5% 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.section-two div {
+	margin: 5% 0;
+}
+
+.section-three img {
+	width: 100%;
+}
+
+.section-four {
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	padding: 5% 0;
+	border-bottom: 1px solid black;
+}
+
+.section-four div {
+	margin: 5% 0;
+}
+
+footer {
+	padding: 5% 0;
+	margin: 0 auto;
+}
+
+footer p {
+	padding: 2% 0;
+	text-align: center;
+}
+
+@media(min-width:501px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav {
+        flex-flow: column-reverse nowrap;
+        align-items: stretch;
+    }
+
+    nav .logo {
+        width: 100%;
+        padding: 4% 0;
+        margin: 0 auto;
+        align-content: center;
+        border-bottom: 1px solid black;
+    }
+
+    nav .logo img {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 150px;
+        border: none;
+    }
+
+    nav .links {
+        flex-flow: column nowrap;
+        align-items: stretch;
+    }
+
+    nav .links a {
+        text-align: center;
+        padding: 5% 0;
+        margin: 0;
+        border-bottom: 1px solid black;
+    }
+
+    .title {
+        margin-bottom: 3%;
+    }
+
+    .title h1 {
+        font-size: 4rem;
+    }
+
+    .title-container button {
+        font-size: 100%;
+        height: 100%;
+        width: 70%;
+    }
+
+    .section-one {
+        padding-bottom: 15%;
+    }
+
+    .section-one img {
+        display: none;
+    }
+
+    .section-two {
+        flex-flow: column nowrap;
+    }
+
+    .section-two div {
+        width: 95%;
+        margin: 5% 0;
+    }
+
+    .section-four {
+        flex-flow: column nowrap;
+    }
+
+    .section-four div {
+        width: 95%;
+        margin: 5% 0;
+
+    }
+}
+
+@media(min-width:801px) {
+    nav {
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    nav .logo {
+        padding: 5% 0;
+        margin: 0 auto;
+        align-content: center;
+    }
+
+    nav .links a {
+        animation: none;
+        color: gray;
+    }
+
+    .section-one {
+        padding-bottom: 15%;
+    }
+
+    .section-one img {
+        display: none;
+    }
+}
+
+/* 
+	Styles specific to Services page 
+*/ 
+
+.hero {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	padding-bottom: 2%;
+}
+
+.hero div {
+	padding: 2% 0;
+}
+
+.hero div h2 {
+	font-size: 200%;
+}
+
+.hero img {
+	width: 100%;
+}
+
+.services-section-two {
+	padding: 2% 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+
+.services-section-two div {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	width: 48%;
+	margin: 2% 0;
+	padding: 2% 2%;
+	border: 1px solid black;
+	background-color: #f4f3f4;
+}
+
+.services-section-two div button {
+	height: 35px;
+	width: 150px;
+	margin-top: 5%;
+	text-decoration: none;
+	background: white;
+	color: black;
+	border: 1px solid black;
+	border-radius: 5px;
+	transition: all 0.2s;
+}
+
+.services-section-two div button:hover {
+	color: black;
+	background-color: grey;
+}
+
+.services-section-three {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+	padding: 5% 0%;
+}
+
+.services-section-three div {
+	width: 45%;
+	display: flex;
+	flex-flow: column nowrap;
+
+}
+
+.services-section-three p {
+	margin-bottom: 5%;
+}
+
+.services-section-three img {
+	width: 45%;
+	max-width: 400px;
+}
+
+.services-section-three ul {
+	line-height: 200%;
+}
+
+@media all and (max-width: 800px) {
+	.services-section-two {
+		flex-flow: column nowrap;
+	}
+	
+	.services-section-two div {
+		width: 100%;
+	}
+	.services-section-three {
+		flex-flow: column nowrap;
+	}
+	.services-section-three div {
+		width: 100%;
+		margin-bottom: 5%;
+	}
+	.services-section-three .employee-image img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.services-section-three .employee-image img {
+		width: 100%;
+		overflow: hidden;
+	}
+}
