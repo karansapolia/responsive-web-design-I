@@ -219,7 +219,7 @@ footer p {
 	text-align: center;
 }
 
-@media(max-width:800px) {
+@media (max-width: 800px) {
     nav {
         flex-flow: column-reverse nowrap;
         align-items: stretch;
@@ -245,7 +245,7 @@ footer p {
     }
 }
 
-@media(max-width:500px) {
+@media (max-width: 500px) {
     .container {
         width: 100%;
         margin: 0;
