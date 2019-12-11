@@ -68,6 +68,8 @@ h1, h2, h3, h4, h5 {
 
 /* CSS RESETS END */
 
+/* ------------------------------- */
+
 /* CUSTOM STYLES */
 
 * {
@@ -80,33 +82,43 @@ ul {
 }
 
 .container {
-	width: 90%;
-	margin: 0 auto;
+	width: 100%;
+	margin: 0;
 }
 
 /* NAV BAR STYLES */
 
 nav {
 	display: flex;
-	align-items: center;
+	flex-flow: column-reverse nowrap;
+	align-items: stretch;
 	justify-content: space-between;
 	margin: 2% 0;
 }
 
 nav .links {
 	display: flex;
+	flex-flow: column nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 	flex-grow: 4;
 }
 
+nav .logo img {
+	display: block;
+	margin: 0 auto;
+}
+
 .links a {
+	text-align: center;
+    padding: 5% 0;
+    margin: 0;
+    border-bottom: 1px solid black;
 	animation-name: color-change;
 	animation-duration: 3s;
 	animation-play-state: paused;
 	color: gray;
 	text-decoration: none;
-	margin: 0 5% 0 0;
 }
 
 .links a:hover {
@@ -126,7 +138,6 @@ nav .links {
 }
 
 nav a img {
-	width: 100%;
 	max-width: 200px;	
 }
 
@@ -140,13 +151,14 @@ nav a img {
 }
 
 .title h1 {
-	font-size: 5rem;
+	font-size: 3rem;
 }
 
 .section-one {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	margin: 7% 0 0 0;
 	padding: 5% 0;
 	text-align: center;
 	border-bottom: 1px solid black;
@@ -161,8 +173,7 @@ nav a img {
 }
 
 .title-container button {
-	height: 40px;
-	width: 200px;
+	width: 75%;
 	font-size: 120%;
 	text-decoration: none;
 	background: white;
@@ -177,6 +188,7 @@ nav a img {
 }
 
 .section-one img {
+	display: none;
 	width: 40%;
 	max-width: 500px;
 }
@@ -184,12 +196,13 @@ nav a img {
 .section-two {
 	padding: 5% 0;
 	display: flex;
+	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .section-two div {
-	width: 47%;
+	margin: 5% 0;
 }
 
 .section-three img {
@@ -199,14 +212,14 @@ nav a img {
 .section-four {
 	display: flex;
 	align-items: center;
-	flex-flow: row wrap;
+	flex-flow: column nowrap;
 	justify-content: space-between;
 	padding: 5% 0;
 	border-bottom: 1px solid black;
 }
 
 .section-four div {
-	width: 32%;
+	margin: 5% 0;
 }
 
 footer {
@@ -219,36 +232,10 @@ footer p {
 	text-align: center;
 }
 
-@media (max-width: 800px) {
-    nav {
-        flex-flow: column-reverse nowrap;
-        align-items: stretch;
-    }
-
-    nav .logo {
-        padding: 5% 0;
-        margin: 0 auto;
-        align-content: center;
-    }
-
-    nav .links a {
-        animation: none;
-        color: gray;
-    }
-
-    .section-one {
-        padding-bottom: 15%;
-    }
-
-    .section-one img {
-        display: none;
-    }
-}
-
-@media (max-width: 500px) {
+@media (min-width: 501px) {
     .container {
-        width: 100%;
-        margin: 0;
+        width: 90%;
+        margin: 0 auto;
     }
 
     nav {
@@ -257,7 +244,6 @@ footer p {
     }
 
     nav .logo {
-        width: 100%;
         padding: 4% 0;
         margin: 0 auto;
         align-content: center;
@@ -273,8 +259,8 @@ footer p {
     }
 
     nav .links {
-        flex-flow: column nowrap;
-        align-items: stretch;
+        flex-flow: row nowrap;
+        align-items: center;
     }
 
     nav .links a {
@@ -307,22 +293,48 @@ footer p {
     }
 
     .section-two {
-        flex-flow: column nowrap;
+        flex-flow: row nowrap;
     }
 
     .section-two div {
-        width: 95%;
+        width: 45%;
         margin: 5% 0;
     }
 
     .section-four {
-        flex-flow: column nowrap;
+        flex-flow: row nowrap;
     }
 
     .section-four div {
-        width: 95%;
+        width: 30%;
         margin: 5% 0;
 
+    }
+}
+
+@media (min-width: 801px) {
+	header {
+		margin: 0;
+	}
+
+    nav {
+        flex-flow: row nowrap;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+    }
+
+    nav .logo {
+        margin: 0 auto;
+        align-content: center;
+    }
+
+    .section-one {
+		margin: 0;
+    }
+
+    .section-one img {
+        display: flex;
     }
 }
 
